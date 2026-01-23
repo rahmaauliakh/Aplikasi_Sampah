@@ -51,8 +51,12 @@ namespace cobaconnectdbonline
             _conversation.Add(new ChatMessage
             {
                 role = "system",
-                content = "Anda adalah chatbot pengelolaan sampah Jawa Barat. Jawab dengan bahasa Indonesia yang sopan dan jelas."
+                content =
+                "Anda adalah chatbot edukasi pengelolaan sampah. " +
+                "Anda HANYA boleh menjawab pertanyaan yang berkaitan dengan sampah, seperti sampah organik, anorganik, daur ulang, pengelolaan sampah, dan kebersihan lingkungan. " +
+                "Jika pengguna bertanya di luar topik sampah, tolak dengan sopan dan jelaskan bahwa chatbot ini hanya melayani edukasi tentang sampah."
             });
+
 
             lblStatus.Text = "Siap";
         }
@@ -79,16 +83,28 @@ namespace cobaconnectdbonline
             AddBubble(message, true);
             txtMessage.Clear();
 
-            _conversation.Add(new ChatMessage
+            if (!IsTrashRelated(message))
             {
-                role = "user",
-                content = message
-            });
+                string warning =
+                    "Maaf, saya hanya dapat menjawab pertanyaan yang berkaitan dengan sampah dan pengelolaannya.";
+
+                AddBubble(warning, false);
+                lblStatus.Text = "Topik di luar cakupan";
+                return;
+            }
 
             lblStatus.Text = "Mengetik...";
 
             try
             {
+                EnsureSystemMessage();
+
+                _conversation.Add(new ChatMessage
+                {
+                    role = "user",
+                    content = message
+                });
+
                 string response = await GetResponseFromMistral();
 
                 _conversation.Add(new ChatMessage
@@ -109,9 +125,11 @@ namespace cobaconnectdbonline
 
         private async Task<string> GetResponseFromMistral()
         {
+            string model = cmbModel.SelectedItem?.ToString() ?? "mistral-tiny";
+
             var requestData = new
             {
-                model = cmbModel.SelectedItem.ToString(),
+                model = model,
                 messages = _conversation,
                 temperature = 0.7,
                 max_tokens = 500
@@ -127,7 +145,9 @@ namespace cobaconnectdbonline
             var responseJson = await response.Content.ReadAsStringAsync();
 
             if (!response.IsSuccessStatusCode)
-                throw new Exception("Gagal terhubung ke Mistral AI");
+            {
+                throw new Exception(responseJson);
+            }
 
             dynamic result = JsonConvert.DeserializeObject(responseJson);
             return result.choices[0].message.content;
@@ -207,6 +227,32 @@ namespace cobaconnectdbonline
             });
 
             lblStatus.Text = "Chat dibersihkan";
+        }
+
+        private void EnsureSystemMessage()
+        {
+            if (!_conversation.Any(m => m.role == "system"))
+            {
+                _conversation.Insert(0, new ChatMessage
+                {
+                    role = "system",
+                    content =
+                    "Anda adalah chatbot edukasi pengelolaan sampah. " +
+                    "Hanya jawab pertanyaan yang berkaitan dengan sampah. " +
+                    "Jika di luar topik, tolak dengan sopan."
+                });
+            }
+        }
+
+        private bool IsTrashRelated(string message)
+        {
+            string[] keywords = {
+        "sampah", "organik", "anorganik", "daur ulang",
+        "limbah", "plastik", "kertas", "bank sampah",
+        "pengelolaan", "kebersihan"
+    };
+
+            return keywords.Any(k => message.ToLower().Contains(k));
         }
 
         public class ChatMessage

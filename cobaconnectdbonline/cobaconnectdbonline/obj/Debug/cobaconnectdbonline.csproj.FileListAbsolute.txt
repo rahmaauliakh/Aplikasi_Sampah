@@ -149,7 +149,6 @@ C:\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\System.
 C:\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\System.Text.Encoding.CodePages.xml
 C:\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\obj\Debug\cobaconnectdbonline.csproj.AssemblyReference.cache
-C:\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\obj\Debug\cobaconnectdbonline.exe.config
 C:\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\obj\Debug\cobaconnectdbonline.Form1.resources
 C:\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\obj\Debug\cobaconnectdbonline.FormAdmin.resources
 C:\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\obj\Debug\cobaconnectdbonline.FormDataSampah.resources
@@ -310,3 +309,4 @@ C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonlin
 C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\obj\Debug\cobaconn.605B3E9A.Up2Date
 C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\obj\Debug\cobaconnectdbonline.exe
 C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\obj\Debug\cobaconnectdbonline.pdb
+C:\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\obj\Debug\cobaconnectdbonline.exe.config
