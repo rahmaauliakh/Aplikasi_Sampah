@@ -1,4 +1,6 @@
-﻿namespace cobaconnectdbonline
+﻿using System.Windows.Forms;
+
+namespace cobaconnectdbonline
 {
     partial class FormAdmin
     {
@@ -35,6 +37,7 @@
             this.btnDataSampah = new System.Windows.Forms.Button();
             this.btnChatBot = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.btnDataPenjemputan = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnKabko
@@ -61,7 +64,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(41, 632);
+            this.btnLogout.Location = new System.Drawing.Point(31, 657);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(99, 34);
@@ -83,7 +86,7 @@
             // 
             // btnDataSampah
             // 
-            this.btnDataSampah.Location = new System.Drawing.Point(702, 43);
+            this.btnDataSampah.Location = new System.Drawing.Point(693, 43);
             this.btnDataSampah.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDataSampah.Name = "btnDataSampah";
             this.btnDataSampah.Size = new System.Drawing.Size(209, 52);
@@ -94,7 +97,7 @@
             // 
             // btnChatBot
             // 
-            this.btnChatBot.Location = new System.Drawing.Point(715, 620);
+            this.btnChatBot.Location = new System.Drawing.Point(908, 648);
             this.btnChatBot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChatBot.Name = "btnChatBot";
             this.btnChatBot.Size = new System.Drawing.Size(209, 52);
@@ -108,9 +111,20 @@
             this.panelMain.BackColor = System.Drawing.Color.White;
             this.panelMain.Location = new System.Drawing.Point(41, 109);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(886, 504);
+            this.panelMain.Size = new System.Drawing.Size(1076, 515);
             this.panelMain.TabIndex = 6;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
+            // 
+            // btnDataPenjemputan
+            // 
+            this.btnDataPenjemputan.Location = new System.Drawing.Point(908, 43);
+            this.btnDataPenjemputan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDataPenjemputan.Name = "btnDataPenjemputan";
+            this.btnDataPenjemputan.Size = new System.Drawing.Size(209, 52);
+            this.btnDataPenjemputan.TabIndex = 7;
+            this.btnDataPenjemputan.Text = "Data Penjemputan";
+            this.btnDataPenjemputan.UseVisualStyleBackColor = true;
+            this.btnDataPenjemputan.Click += new System.EventHandler(this.btnDataPenjemputan_Click);
             // 
             // FormAdmin
             // 
@@ -118,14 +132,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImage = global::cobaconnectdbonline.Properties.Resources.sampah4;
-            this.ClientSize = new System.Drawing.Size(954, 685);
+            this.ClientSize = new System.Drawing.Size(1140, 731);
+            this.Controls.Add(this.btnKabko);
+            this.Controls.Add(this.btnDataPenjemputan);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.btnChatBot);
             this.Controls.Add(this.btnDataSampah);
             this.Controls.Add(this.btnJenisSampah);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnUser);
-            this.Controls.Add(this.btnKabko);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormAdmin";
             this.Text = "FormAdmin";
@@ -142,6 +157,8 @@
         private System.Windows.Forms.Button btnJenisSampah;
         private System.Windows.Forms.Button btnDataSampah;
         private System.Windows.Forms.Button btnChatBot;
+        private System.Windows.Forms.Button btnDataPenjemputan;
         private System.Windows.Forms.Panel panelMain;
+        
     }
 }

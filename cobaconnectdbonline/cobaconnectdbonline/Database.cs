@@ -33,5 +33,7 @@ namespace cobaconnectdbonline
         public IMongoCollection<DataSampah> DataSampah =>
             database.GetCollection<DataSampah>("data_sampah");
 
+        public IMongoCollection<Data_Penjemputan> Data_Penjemputan =>
+            database.GetCollection<Data_Penjemputan>("data_penjemputan");
     }
 }

@@ -27,7 +27,7 @@ namespace cobaconnectdbonline
 
         private void FormAdmin_Load(object sender, EventArgs e)
         {
-
+           
         }
         private void LoadForm(Form frm)
         {
@@ -82,6 +82,11 @@ namespace cobaconnectdbonline
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnDataPenjemputan_Click(object sender, EventArgs e)
+        {
+            LoadForm(new DataPenjemputan());
         }
     }
 }
