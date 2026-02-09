@@ -15,6 +15,7 @@ using iText.Layout;
 using iText.Layout.Element;
 using iText.IO.Font.Constants;
 using iText.Kernel.Font;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace cobaconnectdbonline
 {
@@ -89,6 +90,117 @@ namespace cobaconnectdbonline
 
             if (dgvDataSampah.Columns.Contains("id_sampah"))
                 dgvDataSampah.Columns["id_sampah"].Visible = false;
+
+            // update chart after loading table data
+            LoadChart();
+        }
+
+        private void LoadChart()
+        {
+            try
+            {
+                var db = new Database();
+                var docs = db.DataSampah.Find(_ => true).ToList();
+
+                chartSampah.Series.Clear();
+                chartSampah.ChartAreas.Clear();
+                chartSampah.Legends.Clear();
+
+                if (docs == null || docs.Count == 0)
+                {
+                    var areaEmpty = new ChartArea("AreaEmpty");
+                    chartSampah.ChartAreas.Add(areaEmpty);
+                    return;
+                }
+
+                // get jenis mapping (id -> name)
+                var jenisList = db.JenisSampah.Find(_ => true).ToList();
+                var jenisMap = jenisList.ToDictionary(j => j.id_jenis, j => j.nama_jenis);
+
+                // palette for jenis colors (extend if you have more jenis)
+                Color[] palette = new[]
+                {
+                    Color.SteelBlue,
+                    Color.Orange,
+                    Color.ForestGreen,
+                    Color.Purple,
+                    Color.Tomato,
+                    Color.Goldenrod,
+                    Color.DarkCyan,
+                    Color.MediumVioletRed
+                };
+
+                // distinct ordered dates (group by date part)
+                var dates = docs.Select(d => d.Tanggal.Date)
+                                .Distinct()
+                                .OrderBy(d => d)
+                                .ToList();
+
+                // sum by (date, id_jenis)
+                var sums = docs.GroupBy(d => new { Date = d.Tanggal.Date, d.id_jenis })
+                               .ToDictionary(
+                                    g => (g.Key.Date, g.Key.id_jenis),
+                                    g => g.Sum(x => x.Jumlah)
+                               );
+
+                // chart area
+                var area = new ChartArea("MainArea");
+                area.AxisX.Title = "Tanggal";
+                area.AxisY.Title = "Kg Sampah";
+                area.AxisX.Interval = 1;
+                area.AxisY.IsStartedFromZero = true;
+                area.AxisX.MajorGrid.Enabled = false;
+                area.AxisY.MajorGrid.Enabled = true;
+                chartSampah.ChartAreas.Add(area);
+
+                chartSampah.Legends.Add(new Legend("Legend") { Docking = Docking.Top });
+
+                // create one series per jenis
+                var jenisIds = jenisList.Select(j => j.id_jenis).ToList();
+                if (jenisIds.Count == 0)
+                {
+                    // fallback: create series from data's id_jenis distinct values
+                    jenisIds = docs.Select(d => d.id_jenis).Distinct().ToList();
+                }
+
+                for (int i = 0; i < jenisIds.Count; i++)
+                {
+                    var idJenis = jenisIds[i];
+                    var seriesName = jenisMap.ContainsKey(idJenis) ? jenisMap[idJenis] : idJenis;
+                    var s = new Series(seriesName)
+                    {
+                        ChartType = SeriesChartType.Column,
+                        ChartArea = "MainArea",
+                        IsValueShownAsLabel = true
+                    };
+
+                    // color
+                    s.Color = palette[i % palette.Length];
+
+                    // ensure points for every date (0 if none)
+                    foreach (var date in dates)
+                    {
+                        double value = 0;
+                        if (sums.TryGetValue((date, idJenis), out double v))
+                            value = v;
+
+                        int pointIndex = s.Points.AddXY(date.ToString("yyyy-MM-dd"), value);
+                        s.Points[pointIndex].ToolTip = $"{date:yyyy-MM-dd} - {seriesName}: {value} kg";
+                    }
+
+                    chartSampah.Series.Add(s);
+                }
+
+                // rotate X labels when too many dates
+                if (dates.Count > 10)
+                {
+                    chartSampah.ChartAreas["MainArea"].AxisX.LabelStyle.Angle = -45;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat chart: " + ex.Message);
+            }
         }
 
         private void btnTambah_Click(object sender, EventArgs e)

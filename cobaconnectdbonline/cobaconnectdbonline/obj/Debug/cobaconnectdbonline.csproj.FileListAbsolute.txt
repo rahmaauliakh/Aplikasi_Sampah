@@ -426,3 +426,17 @@ C:\Apk Sampah\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\obj\Debug\
 C:\Apk Sampah\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\obj\Debug\cobaconnectdbonline.pdb
 C:\Apk Sampah\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\obj\Debug\cobaconnectdbonline.exe.config
 C:\Apk Sampah\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\cobaconnectdbonline.pdb
+C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\EntityFramework.dll
+C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\GMap.NET.Core.dll
+C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\GMap.NET.WindowsPresentation.dll
+C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\System.Data.SqlClient.dll
+C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\System.Data.SQLite.dll
+C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\EntityFramework.xml
+C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\System.Data.SqlClient.xml
+C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\bin\Debug\System.Data.SQLite.xml
+C:\Users\hp\Downloads\PBO\Aplikasi_Sampah\cobaconnectdbonline\cobaconnectdbonline\obj\Debug\cobaconnectdbonline.DataPenjemputan.resources
