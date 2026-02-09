@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.cmbWilayah = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbJenis = new System.Windows.Forms.ComboBox();
@@ -45,7 +47,9 @@
             this.dgvDataSampah = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.Button();
             this.ExportButton = new System.Windows.Forms.Button();
+            this.chartSampah = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataSampah)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSampah)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbWilayah
@@ -159,7 +163,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(677, 10);
+            this.btnRefresh.Location = new System.Drawing.Point(940, 13);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 34);
             this.btnRefresh.TabIndex = 13;
@@ -171,13 +175,13 @@
             this.dgvDataSampah.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDataSampah.BackgroundColor = System.Drawing.Color.White;
             this.dgvDataSampah.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDataSampah.Location = new System.Drawing.Point(282, 53);
+            this.dgvDataSampah.Location = new System.Drawing.Point(319, 52);
             this.dgvDataSampah.Name = "dgvDataSampah";
             this.dgvDataSampah.ReadOnly = true;
             this.dgvDataSampah.RowHeadersWidth = 62;
             this.dgvDataSampah.RowTemplate.Height = 28;
             this.dgvDataSampah.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDataSampah.Size = new System.Drawing.Size(581, 440);
+            this.dgvDataSampah.Size = new System.Drawing.Size(799, 300);
             this.dgvDataSampah.TabIndex = 14;
             // 
             // btnBack
@@ -193,19 +197,34 @@
             // 
             // ExportButton
             // 
-            this.ExportButton.Location = new System.Drawing.Point(758, 12);
+            this.ExportButton.Location = new System.Drawing.Point(1003, 13);
             this.ExportButton.Name = "ExportButton";
             this.ExportButton.Size = new System.Drawing.Size(105, 34);
             this.ExportButton.TabIndex = 16;
             this.ExportButton.Text = "Export PDF";
             this.ExportButton.UseVisualStyleBackColor = true;
             // 
+            // chartSampah
+            // 
+            this.chartSampah.BorderlineColor = System.Drawing.Color.LightGray;
+            chartArea1.Name = "ChartArea1";
+            this.chartSampah.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartSampah.Legends.Add(legend1);
+            this.chartSampah.Location = new System.Drawing.Point(319, 370);
+            this.chartSampah.Name = "chartSampah";
+            this.chartSampah.Size = new System.Drawing.Size(799, 425);
+            this.chartSampah.TabIndex = 17;
+            this.chartSampah.Text = "chartSampah";
+            // 
             // FormDataSampah
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(875, 532);
+            this.ClientSize = new System.Drawing.Size(1130, 829);
+            this.Controls.Add(this.chartSampah);
             this.Controls.Add(this.ExportButton);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvDataSampah);
@@ -226,6 +245,7 @@
             this.Name = "FormDataSampah";
             this.Text = "FormDataSampah";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataSampah)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSampah)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,5 +270,6 @@
         private System.Windows.Forms.DataGridView dgvDataSampah;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button ExportButton;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartSampah;
     }
 }
