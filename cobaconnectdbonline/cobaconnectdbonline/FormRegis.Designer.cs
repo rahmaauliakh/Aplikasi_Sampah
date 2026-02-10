@@ -32,75 +32,72 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnRegis = new System.Windows.Forms.Button();
-            this.cmbRole = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.linkLogin = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNama
             // 
-            this.txtNama.Location = new System.Drawing.Point(37, 137);
+            this.txtNama.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtNama.Location = new System.Drawing.Point(152, 215);
             this.txtNama.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNama.Multiline = true;
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(296, 26);
+            this.txtNama.Size = new System.Drawing.Size(293, 35);
             this.txtNama.TabIndex = 0;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(37, 207);
+            this.txtEmail.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtEmail.Location = new System.Drawing.Point(152, 294);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(296, 26);
+            this.txtEmail.Size = new System.Drawing.Size(293, 39);
             this.txtEmail.TabIndex = 1;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(40, 290);
+            this.txtPassword.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtPassword.Location = new System.Drawing.Point(152, 389);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(293, 26);
+            this.txtPassword.Size = new System.Drawing.Size(293, 36);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnRegis
             // 
-            this.btnRegis.BackColor = System.Drawing.Color.Black;
+            this.btnRegis.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnRegis.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRegis.Location = new System.Drawing.Point(228, 434);
+            this.btnRegis.Location = new System.Drawing.Point(152, 459);
             this.btnRegis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegis.Name = "btnRegis";
-            this.btnRegis.Size = new System.Drawing.Size(105, 33);
+            this.btnRegis.Size = new System.Drawing.Size(293, 52);
             this.btnRegis.TabIndex = 4;
             this.btnRegis.Text = "Registrasi";
             this.btnRegis.UseVisualStyleBackColor = false;
             this.btnRegis.Click += new System.EventHandler(this.btnRegis_Click);
             // 
-            // cmbRole
-            // 
-            this.cmbRole.FormattingEnabled = true;
-            this.cmbRole.Items.AddRange(new object[] {
-            "Admin",
-            "Petugas"});
-            this.cmbRole.Location = new System.Drawing.Point(107, 343);
-            this.cmbRole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(226, 28);
-            this.cmbRole.TabIndex = 5;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 101);
+            this.label1.Location = new System.Drawing.Point(176, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 20);
             this.label1.TabIndex = 6;
@@ -109,7 +106,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 174);
+            this.label2.Location = new System.Drawing.Point(179, 263);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 20);
             this.label2.TabIndex = 7;
@@ -118,129 +115,128 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 255);
+            this.label3.Location = new System.Drawing.Point(176, 362);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Password :";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 343);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 20);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Role :";
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(30, 12);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(104, 36);
-            this.btnBack.TabIndex = 10;
-            this.btnBack.Text = "Kembali";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.cmbRole);
             this.panel1.Controls.Add(this.txtNama);
             this.panel1.Controls.Add(this.btnRegis);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(78, 87);
+            this.panel1.Controls.Add(this.linkLogin);
+            this.panel1.Location = new System.Drawing.Point(666, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(369, 525);
+            this.panel1.Size = new System.Drawing.Size(632, 712);
             this.panel1.TabIndex = 11;
             // 
-            // label7
+            // pictureBox4
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(473, 309);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(223, 40);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "JAWA BARAT";
+            this.pictureBox4.Image = global::cobaconnectdbonline.Properties.Resources.user__1_;
+            this.pictureBox4.Location = new System.Drawing.Point(151, 186);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 14;
+            this.pictureBox4.TabStop = false;
             // 
-            // label6
+            // pictureBox3
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(473, 269);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(247, 40);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "DATA SAMPAH";
+            this.pictureBox3.Image = global::cobaconnectdbonline.Properties.Resources.padlock__1_;
+            this.pictureBox3.Location = new System.Drawing.Point(152, 351);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(22, 31);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
             // 
-            // label8
+            // pictureBox2
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(476, 360);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(457, 60);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Sistem monitoring dan pengelolaan data sampah di wilayah\n Jawa Barat untuk menduk" +
-    "ung lingkungan yang bersih, terukur, \ndan berkelanjutan.";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Showcard Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(473, 229);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(230, 40);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Monitoring";
+            this.pictureBox2.ErrorImage = global::cobaconnectdbonline.Properties.Resources.email;
+            this.pictureBox2.Image = global::cobaconnectdbonline.Properties.Resources.email;
+            this.pictureBox2.InitialImage = global::cobaconnectdbonline.Properties.Resources.email;
+            this.pictureBox2.Location = new System.Drawing.Point(152, 263);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(22, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Rockwell", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(51, 44);
+            this.label10.Font = new System.Drawing.Font("Bernard MT Condensed", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label10.Location = new System.Drawing.Point(260, 109);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(269, 39);
+            this.label10.Size = new System.Drawing.Size(113, 38);
             this.label10.TabIndex = 11;
-            this.label10.Text = "Form Registrasi";
+            this.label10.Text = "Sign Up";
+            // 
+            // linkLogin
+            // 
+            this.linkLogin.AutoSize = true;
+            this.linkLogin.LinkColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.linkLogin.Location = new System.Drawing.Point(253, 543);
+            this.linkLogin.Name = "linkLogin";
+            this.linkLogin.Size = new System.Drawing.Size(91, 20);
+            this.linkLogin.TabIndex = 15;
+            this.linkLogin.TabStop = true;
+            this.linkLogin.Text = "Login di sini";
+            this.linkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLogin_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = global::cobaconnectdbonline.Properties.Resources.datasampah;
+            this.pictureBox1.Image = global::cobaconnectdbonline.Properties.Resources.logodata1;
+            this.pictureBox1.InitialImage = global::cobaconnectdbonline.Properties.Resources.datasampah;
+            this.pictureBox1.Location = new System.Drawing.Point(121, 120);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(397, 443);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bell MT", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(221, 525);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(152, 18);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Sudah memiliki akun?";
             // 
             // FormRegis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::cobaconnectdbonline.Properties.Resources.sampah3;
-            this.ClientSize = new System.Drawing.Size(954, 685);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1300, 712);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnBack);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormRegis";
             this.Text = "FormRegis";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -250,17 +246,16 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnRegis;
-        private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.LinkLabel linkLogin;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -399,6 +399,11 @@
   <ItemGroup>
     <Content Include="Resources\datasampah.png" />
     <Content Include="Resources\datasampahfoto.png" />
+    <None Include="Resources\user %281%29.png" />
+    <None Include="Resources\logodata1.png" />
+    <None Include="Resources\logodata.png" />
+    <None Include="Resources\padlock %281%29.png" />
+    <None Include="Resources\email.png" />
     <None Include="Resources\sampahlogo.png" />
     <None Include="Resources\datasampahfoto1.png" />
     <None Include="Resources\datasampah1.png" />
